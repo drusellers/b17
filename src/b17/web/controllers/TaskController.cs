@@ -1,5 +1,6 @@
 namespace b17.web.controllers
 {
+    using System;
     using domain;
 
     public class TaskController
@@ -36,7 +37,7 @@ namespace b17.web.controllers
 
     public class TaskEditSetupViewModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public class ActionResultViewModel

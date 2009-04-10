@@ -36,12 +36,11 @@ namespace b17.persistance
             _container.Store(obj);
         }
 
-        public TEntity Get<TEntity>(int id) where TEntity : Identifiable
+        public TEntity Get<TEntity>(Guid id) where TEntity : Identifiable
         {
             return (from TEntity o in _container
                     where o.Id == id
                     select o).First();
         }
-
     }
 }

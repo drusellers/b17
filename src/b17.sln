@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b17", "b17\b17.csproj", "{2CF50714-5C45-4AC2-80DB-5F23E9A2792B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b17.Specs", "b17.Specs\b17.Specs.csproj", "{C595CE09-BD13-4022-88EE-152DD4597B33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b17.specs", "b17.Specs\b17.specs.csproj", "{C595CE09-BD13-4022-88EE-152DD4597B33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,9 @@
 namespace b17.domain
 {
+    using System;
+
     public interface Identifiable
     {
-        int Id { get; }
+        Guid Id { get; }
     }
 }

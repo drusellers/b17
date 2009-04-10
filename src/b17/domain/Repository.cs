@@ -8,6 +8,6 @@ namespace b17.domain
         IEnumerable<T> FindAll<T>();
         Tasklist GetTaskListByDate(DateTime date);
         void Save<TEntity>(TEntity obj);
-        TEntity Get<TEntity>(int id) where TEntity : Identifiable;
+        TEntity Get<TEntity>(Guid id) where TEntity : Identifiable;
     }
 }

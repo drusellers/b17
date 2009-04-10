@@ -4,11 +4,12 @@ namespace b17.domain
 
     public class Employee
     {
-        public string Name { get; private set; }
+        public string NetworkId { get; private set; }
+        public string Name { get; set; }
 
         public static Employee GetCurrent()
         {
-            return new Employee() {Name = Thread.CurrentPrincipal.Identity.Name };
+            return new Employee() {NetworkId = Thread.CurrentPrincipal.Identity.Name };
         }
     }
 }
