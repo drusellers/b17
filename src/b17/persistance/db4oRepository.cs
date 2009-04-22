@@ -24,11 +24,13 @@ namespace b17.persistance
                    select entity;
         }
 
-        public Tasklist GetTaskListByDate(DateTime date)
+        public TasklistInstance FindOrCreateTaskListByDate(DateTime date)
         {
-            return (from Tasklist t in _container
+            return (from TasklistInstance t in _container
                     where t.StartedOn == date
-                    select t).First();
+                    select t)
+                    .DefaultIfEmpty(new TasklistInstance(date))
+                    .FirstOrDefault();
         }
 
         public void Save<TEntity>(TEntity obj)
@@ -41,6 +43,12 @@ namespace b17.persistance
             return (from TEntity o in _container
                     where o.Id == id
                     select o).First();
+        }
+
+        public void Delete<TEntity>(Guid id) where TEntity : Identifiable
+        {
+            var en = Get<TEntity>(id);
+            _container.Delete(en);
         }
     }
 }

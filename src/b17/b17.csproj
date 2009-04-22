@@ -55,12 +55,13 @@
   <ItemGroup>
     <Compile Include="config\b17Registry.cs" />
     <Compile Include="domain\Employee.cs" />
-    <Compile Include="domain\GenerateNewTasklist.cs" />
+    <Compile Include="domain\GenerateNewTasklistInstance.cs" />
     <Compile Include="domain\Identifiable.cs" />
     <Compile Include="domain\Repository.cs" />
     <Compile Include="domain\Task.cs" />
-    <Compile Include="domain\TaskDetail.cs" />
+    <Compile Include="domain\TaskInstance.cs" />
     <Compile Include="domain\Tasklist.cs" />
+    <Compile Include="domain\TasklistInstance.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="logging\log4net\log4netLogger.cs" />
     <Compile Include="logging\Logger.cs" />
@@ -68,12 +69,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="web\controllers\EmployeeController.cs" />
     <Compile Include="web\controllers\TaskController.cs" />
-    <Compile Include="web\controllers\TaskListController.cs" />
+    <Compile Include="web\controllers\TasklistController.cs" />
     <Compile Include="web\controllers\TodayController.cs" />
-    <Compile Include="web\display_models\TaskDetailForDisplay.cs" />
-    <Compile Include="web\display_models\TaskListForDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="web\display_models\" />
     <Folder Include="web\views\employee\" />
     <Folder Include="web\views\tasklist\" />
     <Folder Include="web\views\task\" />

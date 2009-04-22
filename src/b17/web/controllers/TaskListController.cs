@@ -1,7 +1,27 @@
 namespace b17.web.controllers
 {
-    public class TaskListController
+    public class TasklistController
     {
-        //create task lists
+        TasklistController tlc;
+
+        public void New()
+        {
+            
+        }
+
+        public void List()
+        {
+            
+        }
+
+        public void Delete()
+        {
+            
+        }
+
+        public void Update()
+        {
+            
+        }
     }
 }

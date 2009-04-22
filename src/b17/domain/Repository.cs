@@ -6,8 +6,9 @@ namespace b17.domain
     public interface Repository
     {
         IEnumerable<T> FindAll<T>();
-        Tasklist GetTaskListByDate(DateTime date);
+        TasklistInstance FindOrCreateTaskListByDate(DateTime date);
         void Save<TEntity>(TEntity obj);
         TEntity Get<TEntity>(Guid id) where TEntity : Identifiable;
+        void Delete<TEntity>(Guid id) where TEntity : Identifiable;
     }
 }

@@ -2,6 +2,9 @@ namespace b17.domain
 {
     using System;
 
+    /// <summary>
+    /// This is the abstract task that you create instances of 'TaskInstance'
+    /// </summary>
     public class Task :
         Identifiable
     {

@@ -2,7 +2,6 @@ namespace b17.web.controllers
 {
     using System;
     using System.Linq;
-    using display_models;
     using domain;
 
     public class TodayController
@@ -16,16 +15,9 @@ namespace b17.web.controllers
 
         public TodayViewModel Index(TodaySetupViewModel inModel)
         {
-            var todaysTasks = _repository.GetTaskListByDate(DateTime.Today);
-            var todaysList = new TaskListForDisplay {StartedOn = todaysTasks.StartedOn};
-
-            todaysTasks.Details.Each(td => todaysList.Tasks.Add(new TaskDetailForDisplay()
-                                                                {
-                                                                    Name = td.Name,
-                                                                    Description = td.Description,
-                                                                }));
-
-            var outm = new TodayViewModel {TaskList = todaysList};
+            var todaysTasks = _repository.FindOrCreateTaskListByDate(DateTime.Today);
+            
+            var outm = new TodayViewModel {TaskList = todaysTasks};
 
             return outm;
         }
@@ -36,6 +28,6 @@ namespace b17.web.controllers
     [Serializable]
     public class TodayViewModel
     {
-        public TaskListForDisplay TaskList { get; set; }
+        public TasklistInstance TaskList { get; set; }
     }
 }
